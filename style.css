@@ -137,10 +137,10 @@
 }
 
 .task-item--mode-edit .task-item__label {
-	display: none;
+  display: none;
 }
 
 .task-item--mode-edit .task-item__input {
-	display: inline-block;
-	width: 224px;
+  display: inline-block;
+  width: 224px;
 }
