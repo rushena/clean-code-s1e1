@@ -6,43 +6,45 @@
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
   <body class="site-wrapper">
-    <header class="aaa">
-      <img class="aaa__image" src="./eisenhower-matrix.jpg" alt="The Eisenhower Matrix">
-      <a class="more_inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+    <header class="site-header">
+      <img class="site-header__image" src="./eisenhower-matrix.jpg" alt="The Eisenhower Matrix">
+      <a class="site-header__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </header>
-    <section class="centered-main-page-element">
-      <div id="topSectionForAddingElementToList">
-        <h3 class="block-title">Add Item</h3>
-        <div class="task-row-wrapper">
-          <input id="new-task" class="task site-input" type="text">
-          <button class="site-button">Add</button>
-        </div>
-	  </div>
-      <h3 class="block-title">Todo</h3>
-      <ul class="reset-list" id="incompleteTasks">
-        <li class="reset-list__item task-item">
-          <input type="checkbox" class="site-checkbox">
-          <label class="task">Pay Bills</label>
-          <input type="text" class="task site-input">
-          <button class="edit site-button">Edit</button>
-          <button class="delete site-button"><img src="./remove.svg" alt="Remove task"></button>
+    <section class="site-block">
+      <h3 class="site-block__title">Add Item</h3>
+      <div class="task-item">
+        <input class="task-item__input task-item__input--mode-add site-input" type="text">
+        <button class="site-button js-add-task">Add</button>
+      </div>
+    </section>
+    <section class="site-block">
+      <h3 class="site-block__title">Todo</h3>
+      <ul class="site-block__tasks js-tasks">
+        <li class="task-item">
+          <input type="checkbox" class="task-item__checkbox">
+          <label class="task-item__label">Pay Bills</label>
+          <input type="text" class="task-item__input site-input" value="Pay Bills">
+          <button class="js-edit-button site-button">Edit</button>
+          <button class="js-delete-button site-button"><img class="task-item__delete-image"  src="./remove.svg" alt="Remove task"></button>
         </li>
-        <li class="editMode reset-list__item task-item">
-          <input type="checkbox" class="site-checkbox">
-          <label class="task">Go Shopping</label>
-          <input type="text" value="Go Shopping" class="task site-input">
-          <button class="edit site-button">Save</button>
-          <button class="delete site-button"><img src="./remove.svg" alt="Remove task"></button>
+        <li class="task-item task-item--mode-edit">
+          <input type="checkbox" class="task-item__checkbox">
+          <label class="task-item__label">Go Shopping</label>
+          <input type="text" value="Go Shopping" class="task-item__input site-input">
+          <button class="js-edit-button site-button">Save</button>
+          <button class="js-delete-button site-button"><img class="task-item__delete-image"  src="./remove.svg" alt="Remove task"></button>
         </li>
       </ul>
-      <h3 class="block-title">Completed</h3>
-      <ul id="completed-tasks" class="reset-list">
-        <li class="reset-list__item task-item">
-          <input type="checkbox" checked class="site-checkbox">
-          <label class="task">See the Doctor</label>
-          <input type="text" class="task site-input">
-          <button class="edit site-button">Edit</button>
-          <button class="delete site-button"><img src="./remove.svg" alt="Remove task"></button>
+    </section>
+    <section class="site-block">
+      <h3 class="site-block__title">Completed</h3>
+      <ul class="site-block__tasks js-completed-tasks">
+        <li class="task-item task-item--mode-completed">
+          <input type="checkbox" checked class="task-item__checkbox">
+          <label class="task-item__label task-item__label--mode-completed">See the Doctor</label>
+          <input type="text" class="task-item__input site-input">
+          <button class="js-edit-button site-button">Edit</button>
+          <button class="js-delete-button site-button"><img class="task-item__delete-image" src="./remove.svg" alt="Remove task"></button>
         </li>
       </ul>
     </section>
